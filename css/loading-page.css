@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.loading-page {
+    background: #0d0d0d;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    text-align: center;
+}
+
+.counter p {
+    font-size: 40px;
+    font-weight: 100;
+    color: #f60d54;
+}
+
+.counter h1 {
+    color: white;
+    font-size: 60px;
+    margin-top: 0;
+}
+
+.counter hr {
+    height: 10px;
+    background-color: #f60d54;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.counter .progress {
+    width: 0%;
+    height: 100%;
+    background-color: #f60d54;
+}
+
+.counter {
+    position: relative;
+    width: 200px;
+}
+
+.counter h1.abs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.counter .color {
+    width: 0px;
+    overflow: hidden;
+    color: #f60d54;
+}
+
+.loading-page .counter hr {
+    background: linear-gradient(to right, #f60d54 0%, #f60d54 calc(0% - 1px), #8d7979 calc(0% + 1px), #ffd3d3 100%);
+    border: none;
+    height: 1px;
+}
+
+.loading-page .counter hr {
+    height: 10px;
+
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loading-page .counter hr::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0%;
+    background-color: #f60d54;
+    animation: progress-bar 2s ease-in-out forwards;
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
